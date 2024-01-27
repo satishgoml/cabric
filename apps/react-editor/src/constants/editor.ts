@@ -3542,7 +3542,7 @@ export const sampleFrames = [
     width: 1024,
     height: 768,
     unit: "px",
-    preview: "https://ik.imagekit.io/scenify/social-presentation-4x3.svg",
+    preview: "assets/images/presets_preview/1024x768.png",
   },
   {
     id: 2,
@@ -3550,7 +3550,7 @@ export const sampleFrames = [
     width: 1920,
     height: 1080,
     unit: "px",
-    preview: "https://ik.imagekit.io/scenify/social-presentation-16x9.svg",
+    preview: "assets/images/presets_preview/1080x1920.png",
   },
   {
     id: 3,
@@ -3558,7 +3558,7 @@ export const sampleFrames = [
     width: 1080,
     height: 1920,
     unit: "px",
-    preview: "https://ik.imagekit.io/scenify/social-social-media-story.svg",
+    preview: "assets/images/presets_preview/1080x1920.png",
   },
   {
     id: 4,
@@ -3566,7 +3566,7 @@ export const sampleFrames = [
     width: 1080,
     height: 1080,
     unit: "px",
-    preview: "https://ik.imagekit.io/scenify/social-social-media-post.svg",
+    preview: "assets/images/presets_preview/1080x1080.png",
   },
   {
     id: 5,
@@ -3574,7 +3574,7 @@ export const sampleFrames = [
     width: 1200,
     height: 1200,
     unit: "px",
-    preview: "https://ik.imagekit.io/scenify/social-social-media-post.svg",
+    preview: "assets/images/presets_preview/1200x1200.png",
   },
   {
     id: 6,
