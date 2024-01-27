@@ -12,12 +12,15 @@ import { TimerProvider } from "@layerhub-io/use-timer"
 import i18next from "i18next"
 import "./translations"
 import { UserContextProvider } from "./providers/AuthProvider"
+import { ChakraProvider } from "@chakra-ui/react"
+import { theme } from "./themes/defaultTheme"
 
 const engine = new Styletron()
 
 export default function ({ children }: { children: React.ReactNode }) {
   return (
     <Provider store={store}>
+      <ChakraProvider theme={theme}>
       <UserContextProvider>
         <DesignEditorProvider>
           <TimerProvider>
@@ -33,7 +36,7 @@ export default function ({ children }: { children: React.ReactNode }) {
           </TimerProvider>
         </DesignEditorProvider>
       </UserContextProvider>
-
+      </ChakraProvider>
     </Provider>
   )
 }
