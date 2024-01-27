@@ -481,19 +481,19 @@ export const graphics = [
     ],
     fill: "#CBCBCB",
     metadata: {},
-    preview: "https://ik.imagekit.io/scenify/1635014340531_452464.png",
+    preview: "/assets/images/text_preview/1.png",
     id: "vAE3f8-4M0-2j5PF04cVY",
   },
 ]
 
 export const vectors = [
-  "https://ik.imagekit.io/scenify/001-hug.svg",
-  "https://ik.imagekit.io/scenify/002-date.svg",
-  "https://ik.imagekit.io/scenify/003-happy.svg",
-  "https://ik.imagekit.io/scenify/005-date.svg",
-  "https://ik.imagekit.io/scenify/006-sleep.svg",
-  "https://ik.imagekit.io/scenify/007-hug.svg",
-  "https://ik.imagekit.io/scenify/008-sleep.svg",
+  "/assets/vectors/001-hug.svg",
+  "/assets/vectors/002-date.svg",
+  "/assets/vectors/003-happy.svg",
+  "/assets/vectors/005-sad.svg",
+  "/assets/vectors/006-sleep.svg",
+  "/assets/vectors/007-run.svg",
+  "/assets/vectors/008-ass.svg",
 ]
 
 export const images = [

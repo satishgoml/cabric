@@ -3475,7 +3475,7 @@ const textComponent1 = {
     category: "single",
     types: ["StaticText"],
   },
-  preview: "https://ik.imagekit.io/scenify/bdj0qkh18v4Zx06ZoMbGWb2O.png",
+  preview: "/assets/images/text_preview/1.png",
   userId: "_O8L0WDPlpKhDXspugZe3",
 }
 
@@ -3530,8 +3530,8 @@ const textComponent2 = {
     category: "single",
     types: ["StaticText"],
   },
-  preview: "https://ik.imagekit.io/scenify/lJaXfdYQMHysY8VwUkWcIgqd.png",
-  userId: "_O8L0WDPlpKhDXspugZe3",
+  preview: "/assets/images/text_preview/2.png",
+  userId: "_O8L0WDPlpKhDXspugZe3"
 }
 export const textComponents = [textComponent1, textComponent2]
 
