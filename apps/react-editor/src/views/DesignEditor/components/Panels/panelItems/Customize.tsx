@@ -300,7 +300,10 @@ function ResizeTemplate() {
                             justifyContent: "center",
                           }}
                         >
-                          <img src={sampleFrame.preview} />
+                          <img src={sampleFrame.preview} 
+                          
+                            height={"100px"}
+                          />
                         </Block>
                         <Block style={{ fontSize: "13px", textAlign: "center" }}>
                           <Block style={{ fontWeight: 500 }}>{sampleFrame.name}</Block>
