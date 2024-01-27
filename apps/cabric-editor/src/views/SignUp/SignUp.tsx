@@ -1,9 +1,13 @@
 import React from 'react'
 import { Box, Button, Text, Image, Link, Grid } from '@chakra-ui/react'
-import { Formik} from 'formik'
+import { Formik } from 'formik'
 import * as Yup from 'yup'
 import { toast } from '~/themes/defaultTheme'
 import { InputFormControl } from '~/components/Forms/FormInput'
+import useAuth from '~/providers/AuthProvider'
+
+
+
 
 // Define an enum for form keys
 enum FormKeys {
@@ -34,6 +38,9 @@ const SignUp: React.FC = () => {
       .required('Confirm Password is required'),
   })
 
+  const { signUpNewUser } = useAuth();
+
+
   return (
     <Grid
       templateColumns={{ base: '1fr', md: '5fr 6fr' }}
@@ -59,15 +66,30 @@ const SignUp: React.FC = () => {
           validationSchema={validationSchema}
           onSubmit={async (values, { setSubmitting }) => {
             setSubmitting(true)
-            //  await signUp(values)
+            try {
+              await signUpNewUser(values.email, values.password)
+              toast({
+                title: 'Success',
+                description: 'Sign up successful',
+                status: 'success',
+                duration: 9000,
+                isClosable: true,
+              })
 
-            // toast({
-            //   title: 'Account created.',
-            //   description: 'We have created your account for you. Please login to continue.',
-            //   status: 'success',
-            //   duration: 9000,
-            //   isClosable: true,
-            // })
+            }
+            catch (error) {
+              console.log(error)
+              toast({
+                title: 'Error',
+                description: (error as Error).message,
+                status: 'error',
+                duration: 9000,
+                isClosable: true,
+              })
+              setSubmitting(false)
+              return
+            }
+
 
 
 

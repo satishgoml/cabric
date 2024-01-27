@@ -15,6 +15,7 @@ import { UserContextProvider } from "./providers/AuthProvider"
 import { ChakraProvider } from "@chakra-ui/react"
 import { theme } from "./themes/defaultTheme"
 
+
 const engine = new Styletron()
 
 export default function ({ children }: { children: React.ReactNode }) {
@@ -40,3 +41,4 @@ export default function ({ children }: { children: React.ReactNode }) {
     </Provider>
   )
 }
+

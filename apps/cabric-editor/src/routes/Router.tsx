@@ -13,8 +13,8 @@ function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login" element={session.user ? <Navigate replace to="/" /> : <Login />} />
-        <Route path="/signup" element={session.user ? <Navigate replace to="/" /> : <SignUp />} />
+        <Route path="/login" element={session? <Navigate replace to="/" /> : <Login />} />
+        <Route path="/signup" element={session? <Navigate replace to="/" /> : <SignUp />} />
         <Route path="/" element={<ProtectedRoutes />}>
           <Route path="/manage" element={<Dashboard />} />
           <Route path="/" element={<DesignEditor />} />

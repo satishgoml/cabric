@@ -12,7 +12,7 @@ enum FormKeys {
   PASSWORD = 'password',
 }
 
-const SignUp: React.FC = () => {
+const LogIn: React.FC = () => {
   const initialValues = {
     [FormKeys.EMAIL]: '',
     [FormKeys.PASSWORD]: '',
@@ -27,7 +27,7 @@ const SignUp: React.FC = () => {
       .required('Password is required'),
   })
 
-  const { setSession } = useAuth()
+  const { login } = useAuth()
 
   return (
     <Grid
@@ -54,20 +54,25 @@ const SignUp: React.FC = () => {
           validationSchema={validationSchema}
           onSubmit={async (values, { setSubmitting }) => {
             setSubmitting(true)
-            // var res = await login(values)
+            try{ 
+              await login(values.email, values.password)
+              toast({
+                title: 'Login successful',
+                description: 'You have successfully logged in',
+                status: 'success',
+                duration: 9000,
+                isClosable: true,
+              }) 
+            } catch (error) { 
+              toast({
+                title: 'Login failed',
+                description: (error as Error).message,
+                status: 'error',
+                duration: 9000,
+                isClosable: true,
+              }) 
+            }
 
-            // console.log("Response from login", res)
-            // setSession(res.result)
-
-            // toast({
-            //   title: 'Login successful',
-            //   description: 'You have successfully logged in',
-            //   status: 'success',
-            //   duration: 9000,
-            //   isClosable: true,
-            // })
-
-            // setSubmitting(false)
           }}
         >
           {({ handleSubmit }) => (
@@ -126,4 +131,4 @@ const SignUp: React.FC = () => {
   )
 }
 
-export default SignUp
+export default LogIn
