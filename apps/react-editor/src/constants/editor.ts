@@ -3550,7 +3550,7 @@ export const sampleFrames = [
     width: 1920,
     height: 1080,
     unit: "px",
-    preview: "assets/images/presets_preview/1080x1920.png",
+    preview: "assets/images/presets_preview/1920x1080.png",
   },
   {
     id: 3,
