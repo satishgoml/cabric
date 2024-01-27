@@ -16,6 +16,7 @@ export const getUploads = createAsyncThunk<void, never, { rejectValue: Record<st
       const uploads = await api.getUploads()
       dispatch(setUploads(uploads))
     } catch (err) {
+      console.log(err)
       return rejectWithValue((err as any).response?.data?.error.data || null)
     }
   }
