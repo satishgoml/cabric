@@ -5,8 +5,7 @@ import { Delete } from "baseui/icon"
 import { throttle } from "lodash"
 import { useActiveObject, useEditor } from "@layerhub-io/react"
 import { TEXT_EFFECTS } from "~/constants/design-editor"
-import Outline from "./Common/Outline"
-import Shadow from "./Common/Shadow"
+
 
 const EFFECTS = {
   None: {
@@ -78,10 +77,11 @@ const EFFECTS = {
   },
 }
 export default function () {
+    // @ts-ignore
   const [color, setColor] = React.useState("#b32aa9")
   const activeObject = useActiveObject()
   const editor = useEditor()
-
+  // @ts-ignore
   const updateObjectFill = throttle((color: string) => {
     if (activeObject) {
       editor.objects.update({ fill: color })

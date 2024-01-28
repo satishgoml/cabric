@@ -1,4 +1,4 @@
-import React from "react"
+
 import { Block } from "baseui/block"
 import { useEditor } from "@layerhub-io/react"
 import { PLACEMENT, StatefulTooltip } from "baseui/tooltip"

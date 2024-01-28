@@ -31,6 +31,7 @@ export const AppContext = createContext<IAppContext>({
     activePanel: PanelType.TEMPLATES,
     setActivePanel: () => {},
     activeSubMenu: null,
+      // @ts-ignore
     setActiveSubMenu: (value: string) => {},
     currentTemplate: {},
     setCurrentTemplate: {},

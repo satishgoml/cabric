@@ -22,6 +22,7 @@ const PRESET_COLORS = [
 ]
 
 export default function () {
+    // @ts-ignore
   const [color, setColor] = React.useState("#b32aa9")
   const activeObject = useActiveObject()
   const editor = useEditor()

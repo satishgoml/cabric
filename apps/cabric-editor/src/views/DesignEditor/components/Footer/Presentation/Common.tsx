@@ -31,7 +31,7 @@ export default function () {
   React.useEffect(() => {
     setOptions({ ...options, zoomRatio: Math.round(zoomRatio * 100) })
   }, [zoomRatio])
-
+    // @ts-ignore
   const handleChange = (type: string, value: any) => {
     if (value < 0) {
       editor.zoom.zoomToRatio(zoomMin / 100)

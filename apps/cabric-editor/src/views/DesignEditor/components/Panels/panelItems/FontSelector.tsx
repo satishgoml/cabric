@@ -15,7 +15,9 @@ import AngleDoubleLeft from "~/components/Icons/AngleDoubleLeft"
 import useSetIsSidebarOpen from "~/hooks/useSetIsSidebarOpen"
 
 export default function () {
+  // @ts-ignore
   const [query, setQuery] = React.useState("")
+    // @ts-ignore
   const { setActiveSubMenu } = useAppContext()
   const setIsSidebarOpen = useSetIsSidebarOpen()
 

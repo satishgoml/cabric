@@ -4,6 +4,7 @@ import Canvas from "./components/Canvas"
 import Footer from "./components/Footer"
 import Toolbox from "./components/Toolbox"
 import EditorContainer from "./components/EditorContainer"
+  // @ts-ignore
 import ContextMenu from "./components/ContextMenu"
 
 function GraphicEditor() {

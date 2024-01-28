@@ -5,6 +5,7 @@ export const loadVideoResource = (videoSrc: string): Promise<HTMLVideoElement> =
     var video = document.createElement("video")
     video.src = videoSrc
     video.crossOrigin = "anonymous"
+      // @ts-ignore
     video.addEventListener("loadedmetadata", function (event) {
       video.currentTime = 1
     })
@@ -53,6 +54,7 @@ export const loadVideoEditorAssets = async (payload: IScene) => {
       // @ts-ignore
       const video = await loadVideoResource(layer.src)
       const frame = (await captureFrame(video)) as string
+        // @ts-ignore
       const duration = await captureDuration(video)
       layers.push({
         ...layer,

@@ -40,6 +40,7 @@ function PanelsList() {
 function PanelListItem({ label, icon, activePanel, name }: any) {
   const { setActivePanel } = useAppContext()
   const setIsSidebarOpen = useSetIsSidebarOpen()
+    // @ts-ignore
   const [css, theme] = useStyletron()
   // @ts-ignore
   const Icon = Icons[icon]

@@ -56,6 +56,7 @@ export default function () {
     }
   }
 
+    // @ts-ignore
   const makeAddScene = () => {}
 
   const makeDuplicateScene = () => {

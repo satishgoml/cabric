@@ -3620,6 +3620,7 @@ export const sampleFrames = [
 
 const layers: ILayer[] = []
 
+  // @ts-ignore
 const graphicTemplate = {
   id: "",
   name: "",
@@ -3628,19 +3629,19 @@ const graphicTemplate = {
   content: [...layers],
 }
 
-const presentationTemplate = {
-  id: "",
-  name: "",
-  type: "PRESENTATION",
-  frame: {},
-  content: [
-    {
-      duration: 1000,
-      layers: [],
-    },
-  ],
-}
-
+// const presentationTemplate = {
+//   id: "",
+//   name: "",
+//   type: "PRESENTATION",
+//   frame: {},
+//   content: [
+//     {
+//       duration: 1000,
+//       layers: [],
+//     },
+//   ],
+// }
+  // @ts-ignore
 const VideoTemplate = {
   id: "",
   name: "",

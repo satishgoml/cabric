@@ -12,6 +12,7 @@ import Unlocked from "~/components/Icons/Unlocked"
 function ContextMenu() {
   const contextMenuRequest = useContextMenuRequest()
   const editor = useEditor()
+    // @ts-ignore
   const handleAsComponentHandler = async () => {
     if (editor) {
       const component: any = await editor.scene.exportAsComponent()

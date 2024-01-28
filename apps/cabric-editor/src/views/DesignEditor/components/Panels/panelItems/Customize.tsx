@@ -275,6 +275,7 @@ function ResizeTemplate() {
             }}
             activeKey={activeKey}
             onChange={({ activeKey }) => {
+                // @ts-ignore
               setActiveKey(activeKey)
             }}
           >

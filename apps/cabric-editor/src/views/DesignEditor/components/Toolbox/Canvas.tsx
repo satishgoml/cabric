@@ -1,6 +1,5 @@
 import React from "react"
 import { Block } from "baseui/block"
-import Common from "./Common"
 import useAppContext from "~/hooks/useAppContext"
 import { useActiveObject, useEditor } from "@layerhub-io/react"
 

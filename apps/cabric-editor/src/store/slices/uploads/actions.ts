@@ -3,6 +3,7 @@ import { uniqueFilename } from "~/utils/unique"
 import { createAsyncThunk, createAction } from "@reduxjs/toolkit"
 import api from "~/services/api"
 import axios from "axios"
+  // @ts-ignore
 import mime from "mime/lite"
 
 export const setUploads = createAction<IUpload[]>("uploads/setUploads")

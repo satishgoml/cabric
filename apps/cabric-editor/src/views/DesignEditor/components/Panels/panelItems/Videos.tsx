@@ -14,6 +14,7 @@ const loadVideoResource = (videoSrc: string): Promise<HTMLVideoElement> => {
     var video = document.createElement("video")
     video.src = videoSrc
     video.crossOrigin = "anonymous"
+      // @ts-ignore
     video.addEventListener("loadedmetadata", function (event) {
       video.currentTime = 1
     })
@@ -60,6 +61,7 @@ export default function () {
   const setIsSidebarOpen = useSetIsSidebarOpen()
   const [videos, setVideos] = React.useState<any[]>([])
   const { scenes, setScenes, currentScene } = useDesignEditorContext()
+    // @ts-ignore
   const loadPixabayVideos = async () => {
     const videos = await getPixabayVideos("people")
     setVideos(videos)
@@ -125,6 +127,7 @@ export default function () {
   )
 }
 
+  // @ts-ignore
 function ImageItem({ preview, onClick }: { preview: any; onClick?: (option: any) => void }) {
   const [css] = useStyletron()
   return (

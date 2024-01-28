@@ -4,6 +4,7 @@ import { Block } from "baseui/block"
 import { useSortable } from "@dnd-kit/sortable"
 import { CSS } from "@dnd-kit/utilities"
 import useDesignEditorContext from "~/hooks/useDesignEditorContext"
+  // @ts-ignore
 import useOnClickOutside from "~/hooks/useOnClickOutside"
 
 interface Props {

@@ -9,7 +9,7 @@ import useSetIsSidebarOpen from "~/hooks/useSetIsSidebarOpen"
 import { nanoid } from "nanoid"
 import { captureFrame, loadVideoResource } from "~/utils/video"
 
-const toBase64 = (file) =>
+const toBase64 = (file: any) =>
   new Promise((resolve, reject) => {
     const reader = new FileReader()
     reader.readAsDataURL(file)
@@ -50,7 +50,7 @@ export default function () {
     handleDropFiles(e.target.files!)
   }
 
-  const addImageToCanvas = (props) => {
+  const addImageToCanvas = (props: any) => {
     editor.objects.add(props)
   }
   return (

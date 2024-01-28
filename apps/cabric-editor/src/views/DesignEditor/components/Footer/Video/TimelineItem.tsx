@@ -7,6 +7,7 @@ import useDesignEditorContext from "~/hooks/useDesignEditorContext"
 import useDesignEditorScenes from "~/hooks/useDesignEditorScenes"
 import { useTimer } from "@layerhub-io/use-timer"
 
+  // @ts-ignore
 function VerticalLine({ size }: { size: number }) {
   return (
     <svg width="3" height="24" viewBox="0 0 3 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -113,6 +114,7 @@ export default function ({ item, makeResizeTimelineItem, width, preview, frame, 
   return (
     <Resizable
       onResizeStart={() => setOptions({ ...options, isResizing: true })}
+        // @ts-ignore
       onResizeStop={(e, direction, ref, d) => {
         setOptions({
           ...options,

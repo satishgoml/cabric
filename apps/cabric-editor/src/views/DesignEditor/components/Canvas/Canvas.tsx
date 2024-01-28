@@ -1,4 +1,4 @@
-import React from "react"
+
 import { Canvas } from "@layerhub-io/react"
 import Playback from "../Playback"
 import useDesignEditorContext from "~/hooks/useDesignEditorContext"

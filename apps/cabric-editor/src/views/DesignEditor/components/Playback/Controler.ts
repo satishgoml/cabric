@@ -45,11 +45,13 @@ class PlaybackController {
   /**
    * Pixi wrapper DOM Reference
    */
+  // @ts-ignore
   private el: HTMLElement
 
   /**
    * Pixi app instance
    */
+    // @ts-ignore
   private app: PIXI.Application
 
   /**
@@ -60,12 +62,15 @@ class PlaybackController {
   /**
    * Resources map for audio elements
    */
+    // @ts-ignore
   private audioResources: Map<string, any>
+    // @ts-ignore
   private clipResources: Map<string, any>
 
   /**
    * Required options used to hold the elements data
    */
+    // @ts-ignore
   private status: string = "STOPPED"
   private zoomRatio: number = 1
   /**
@@ -115,6 +120,7 @@ class PlaybackController {
    * @public
    */
   public render = (time: number) => {
+      // @ts-ignore
     for (let [key, resource] of this.resources) {
       if (time > resource.display.from && time < resource.display.to!) {
         this.applySpriteOptions(resource.sprite, { visible: true })
@@ -139,6 +145,7 @@ class PlaybackController {
    * @returns
    */
   public play = () => {
+      // @ts-ignore
     for (let [key, value] of this.resources) {
       this.applySpriteOptions(value.sprite, value.position)
       if (value.type === "StaticVideo") {
@@ -220,6 +227,7 @@ class PlaybackController {
     }
 
     return new Promise((resolve) => {
+        // @ts-ignore
       loader.load((loader, resources) => {
         for (const [key, resource] of Object.entries(resources)) {
           const element = updatedLayers.find((i) => i.id === key) as Element

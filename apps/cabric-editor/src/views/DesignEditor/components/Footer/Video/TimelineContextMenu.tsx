@@ -65,7 +65,7 @@ export default function () {
       setScenes([{ ...initialDesign, preview: preview, duration: 5000 }])
     }
   }
-
+    // @ts-ignore
   const makeAddScene = () => {}
 
   const makeDuplicateScene = () => {

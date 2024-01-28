@@ -4,7 +4,6 @@ import { useStyletron } from "styletron-react"
 import { useEditor } from "@layerhub-io/react"
 import { FontItem } from "~/interfaces/common"
 import { loadFonts } from "~/utils/fonts"
-import { IStaticText } from "@layerhub-io/types"
 import { nanoid } from "nanoid"
 import { Block } from "baseui/block"
 import AngleDoubleLeft from "~/components/Icons/AngleDoubleLeft"
@@ -115,12 +114,7 @@ export default function () {
   )
 }
 
-interface TextComponent {
-  id: string
-  metadata: {
-    preview: string
-  }
-}
+
 function TextComponentItem({ component, onClick }: { component: any; onClick: (option: any) => void }) {
   const [css] = useStyletron()
   return (

@@ -12,7 +12,7 @@ interface ToolboxState {
   toolbox: string
 }
 
-const Container = styled("div", (props) => ({
+const Container = styled("div", () => ({
   boxShadow: "rgb(0 0 0 / 15%) 0px 1px 1px",
   height: "50px",
   display: "flex",

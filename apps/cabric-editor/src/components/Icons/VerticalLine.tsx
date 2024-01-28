@@ -1,3 +1,4 @@
+  // @ts-ignore
 function VerticalLine({ size }: { size: number }) {
   return (
     <svg
