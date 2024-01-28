@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Text, Image, Link, Grid } from '@chakra-ui/react'
+import { Box, Button, Text, Image, Link, Grid, Flex } from '@chakra-ui/react'
 import { Formik } from 'formik'
 import * as Yup from 'yup'
 import { toast } from '~/themes/defaultTheme'
@@ -31,20 +31,15 @@ const LogIn: React.FC = () => {
 
   return (
     <Grid
-      templateColumns={{ base: '1fr', md: '5fr 6fr' }}
+      templateColumns={{ base: '1fr', md: '6fr 10fr' }}
       gap={4}
       height="100vh"
       alignItems="center"
       justifyContent="center"
+      width={{ base: '100%', md: '100%' }}
     >
       {/* Left Side - Form */}
-      <Box
-        width="100%"
-        padding={4}
-        borderRadius="md"
-        backgroundColor="white"
-        px={8}
-      >
+      <Box padding={4} borderRadius="md" backgroundColor="white" px={8}>
         <Text fontSize="2xl" mb={4} textAlign="center">
           Login
         </Text>
@@ -54,7 +49,7 @@ const LogIn: React.FC = () => {
           validationSchema={validationSchema}
           onSubmit={async (values, { setSubmitting }) => {
             setSubmitting(true)
-            try{ 
+            try {
               await login(values.email, values.password)
               toast({
                 title: 'Login successful',
@@ -62,23 +57,21 @@ const LogIn: React.FC = () => {
                 status: 'success',
                 duration: 9000,
                 isClosable: true,
-              }) 
-            } catch (error) { 
+              })
+            } catch (error) {
               toast({
                 title: 'Login failed',
                 description: (error as Error).message,
                 status: 'error',
                 duration: 9000,
                 isClosable: true,
-              }) 
+              })
             }
-
           }}
         >
           {({ handleSubmit }) => (
             <Grid gap={4}>
               {/* Use InputFormControl for each input field */}
-
               <InputFormControl
                 label="Email address"
                 name={FormKeys.EMAIL}
@@ -118,15 +111,23 @@ const LogIn: React.FC = () => {
         </Text>
       </Box>
 
-      {/* Right Side - Banner Image */}
-      <Image
-        // src={IMAGES.SIGNUP_BANNER}
-        alt="Banner"
-        boxSize="100%"
-        objectFit="cover"
-        display={['none', 'block']}
-        height={{ base: '0', md: '100vh' }}
-      />
+      {/* Right Side - Cabric */}
+      <Flex
+        direction="column"
+        alignItems="center"
+        justifyContent="center"
+        display={{ base: 'none', md: 'flex' }}
+        height="100vh"
+        bg={"black"}
+        color={"white"}
+      >
+        <Text fontSize="4xl">
+          Cabric
+        </Text>
+        <Text fontSize="2xl">
+          OSS Design Editor
+        </Text>
+      </Flex>
     </Grid>
   )
 }

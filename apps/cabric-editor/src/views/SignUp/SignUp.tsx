@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Text, Image, Link, Grid } from '@chakra-ui/react'
+import { Box, Button, Text, Image, Link, Grid, Flex } from '@chakra-ui/react'
 import { Formik } from 'formik'
 import * as Yup from 'yup'
 import { toast } from '~/themes/defaultTheme'
@@ -46,12 +46,11 @@ const SignUp: React.FC = () => {
       templateColumns={{ base: '1fr', md: '5fr 6fr' }}
       gap={4}
       height="100vh"
-      alignItems="center"
-      justifyContent="center"
+      width={{ base: '100%', md: '100%' }}
     >
       {/* Left Side - Form */}
       <Box
-        width="100%"
+        my={"auto"}
         padding={4}
         borderRadius="md"
         backgroundColor="white"
@@ -162,14 +161,22 @@ const SignUp: React.FC = () => {
       </Box>
 
       {/* Right Side - Banner Image */}
-      <Image
-        // src={IMAGES.SIGNUP_BANNER}
-        alt="Banner"
-        boxSize="100%"
-        objectFit="cover"
-        display={['none', 'block']}
-        height={{ base: '0', md: '100vh' }}
-      />
+      <Flex
+        direction="column"
+        alignItems="center"
+        justifyContent="center"
+        display={{ base: 'none', md: 'flex' }}
+        height="100vh"
+        bg={"black"}
+        color={"white"}
+      >
+        <Text fontSize="4xl">
+          Cabric
+        </Text>
+        <Text fontSize="2xl">
+          OSS Design Editor
+        </Text>
+      </Flex>
     </Grid>
   )
 }
