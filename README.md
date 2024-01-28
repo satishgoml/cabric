@@ -16,3 +16,5 @@ Go to each individual application under apps directory:
 ```sh
 pnpm dev # Will start application on development mode
 ```
+Thanks
+https://github.com/layerhub-io/layerhub-io
