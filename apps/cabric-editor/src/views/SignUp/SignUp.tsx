@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Text, Image, Link, Grid, Flex } from '@chakra-ui/react'
+import { Box, Button, Text, Link, Grid, Flex } from '@chakra-ui/react'
 import { Formik } from 'formik'
 import * as Yup from 'yup'
 import { toast } from '~/themes/defaultTheme'
