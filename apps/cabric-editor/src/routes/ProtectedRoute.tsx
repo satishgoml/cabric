@@ -5,7 +5,7 @@ import useAuth from '~/providers/AuthProvider'
 export const ProtectedRoutes = () => {
   const { session } = useAuth()
   const location = useLocation()
-  return session.user ? (
+  return session? (
       <Outlet />
   ) : (
     <Navigate to="/login" replace state={{ from: location }} />

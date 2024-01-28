@@ -14,6 +14,8 @@ import { loadVideoEditorAssets } from "~/utils/video"
 import DesignTitle from "./DesignTitle"
 import { IDesign } from "~/interfaces/DesignEditor"
 import Github from "~/components/Icons/Github"
+import useAuth from "~/providers/AuthProvider"
+import { toast } from "~/themes/defaultTheme"
 
 const Container = styled<"div", {}, Theme>("div", ({ $theme }) => ({
   height: "64px",
@@ -29,6 +31,10 @@ export default function () {
   const editorType = useEditorType()
   const editor = useEditor()
   const inputFileRef = React.useRef<HTMLInputElement>(null)
+
+  const {
+    logout
+  } = useAuth();
 
   const parseGraphicJSON = () => {
     const currentScene = editor.scene.exportToJSON()
@@ -330,10 +336,20 @@ export default function () {
           <Button
             style={{ marginLeft: "0.5rem" }}
             size="compact"
-            onClick={() => window.location.replace("https://editor.layerhub.io")}
+            onClick={async () =>  {
+              await logout();
+              toast({
+                title: 'Logout successful',
+                description: 'You have successfully logged out',
+                status: 'success',
+                duration: 9000,
+                isClosable: true,
+              })
+            }
+          }
             kind={KIND.primary}
           >
-            Try PRO
+            Log out
           </Button>
         </Block>
       </Container>
