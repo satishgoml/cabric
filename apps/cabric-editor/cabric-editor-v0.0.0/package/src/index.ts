@@ -1,1 +1,0 @@
-export {CabricEditor} from './editor';
