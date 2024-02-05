@@ -1,3 +1,6 @@
+import ELEMENTS from "@/assets/images/elements"
+import VECTORS from "@/assets/vectors"
+
 export const graphics = [
   {
     left: 0,
@@ -12,7 +15,7 @@ export const graphics = [
     path: [["M", 60, 0], ["L", 0, 0], ["L", 0, 60], ["L", 60, 60], ["L", 60, 0], ["Z"]],
     fill: "#CBCBCB",
     metadata: {},
-    preview: "/assets/images/elements/rectangle.png",
+    preview: ELEMENTS.RECTANGLE,
     id: "E2mcHFkwGA-MTJcfl3Abs",
   },
   {
@@ -29,7 +32,7 @@ export const graphics = [
     fill: "#CBCBCB",
     metadata: {},
     id: "SY15tkntkk8S1PudoMfRI",
-    preview: "assets/images/elements/triangle.png",
+    preview:  ELEMENTS.TRIANGLE,
   },
   {
     left: 0,
@@ -67,7 +70,7 @@ export const graphics = [
     ],
     fill: "#CBCBCB",
     metadata: {},
-    preview: "assets/images/elements/pentagon.png",
+    preview:  ELEMENTS.PENTAGON,
     id: "9VWsxoB_O8LSAkCIRjNFY",
   },
   {
@@ -134,7 +137,7 @@ export const graphics = [
     ],
     fill: "#CBCBCB",
     metadata: {},
-    preview: "assets/images/elements/star.png",
+    preview:  ELEMENTS.STAR,
     id: "fRmRlanl-hydswssHKhn6",
   },
   {
@@ -217,7 +220,7 @@ export const graphics = [
     ],
     fill: "#CBCBCB",
     metadata: {},
-    preview: "assets/images/elements/star_rounded.png",
+    preview:  ELEMENTS.STAR_ROUNDED,
     id: "A8WLbfJFV1D58X1RUZADd",
   },
   {
@@ -304,7 +307,7 @@ export const graphics = [
     ],
     fill: "#CBCBCB",
     metadata: {},
-    preview: "assets/images/elements/bird.png",
+    preview:  ELEMENTS.BIRD,
     id: "0dwJMLuw8DK9jddPSapOV",
   },
   {
@@ -348,7 +351,7 @@ export const graphics = [
     ],
     fill: "#CBCBCB",
     metadata: {},
-    preview: "assets/images/elements/heart.png",
+    preview:  ELEMENTS.HEART,
     id: "3w9KPQbyeUe3kgtwpMZx4",
   },
   {
@@ -481,20 +484,14 @@ export const graphics = [
     ],
     fill: "#CBCBCB",
     metadata: {},
-    preview: "assets/images/elements/thumbs_up.png",
+    preview:  ELEMENTS.THUMBS_UP,
     id: "vAE3f8-4M0-2j5PF04cVY",
   },
 ]
 
-export const vectors = [
-  "/assets/vectors/001-hug.svg",
-  "/assets/vectors/002-date.svg",
-  "/assets/vectors/003-happy.svg",
-  "/assets/vectors/005-sad.svg",
-  "/assets/vectors/006-sleep.svg",
-  "/assets/vectors/007-run.svg",
-  "/assets/vectors/008-ass.svg",
-]
+export const vectors = Object.values(VECTORS)
+
+
 
 export const images = [
   {

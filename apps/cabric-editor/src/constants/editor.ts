@@ -1,3 +1,6 @@
+import PRESETS_PREVIEW from "@/assets/images/presets_preview"
+import TEMPLATE_PREVIEW from "@/assets/images/template_preview"
+import TEXT_PREVIEW from "@/assets/images/text_preview"
 import { ILayer } from "@layerhub-io/types"
 
 export const SecondLevelMenus = ["FontFamily"]
@@ -197,7 +200,7 @@ export const SAMPLE_TEMPLATES = [
     metadata: {
       animated: false,
     },
-    preview: "assets/images/template_preview/template_1.png",
+    preview: TEMPLATE_PREVIEW.TEMPLATE_1
   },
   {
     id: "sRQQYw0OOnctiJUBsMg6S",
@@ -367,7 +370,7 @@ export const SAMPLE_TEMPLATES = [
     metadata: {
       animated: false,
     },
-    preview: "assets/images/template_preview/template_2.png",
+    preview:  TEMPLATE_PREVIEW.TEMPLATE_2
   },
   {
     id: "x2shx-AJICr0dZo32dq9y",
@@ -537,7 +540,7 @@ export const SAMPLE_TEMPLATES = [
     metadata: {
       animated: false,
     },
-    preview: "assets/images/template_preview/template_3.png",
+    preview:  TEMPLATE_PREVIEW.TEMPLATE_3
   },
 ]
 
@@ -3475,7 +3478,7 @@ const textComponent1 = {
     category: "single",
     types: ["StaticText"],
   },
-  preview: "/assets/images/text_preview/1.png",
+  preview: TEXT_PREVIEW.TEXT_1,
   userId: "_O8L0WDPlpKhDXspugZe3",
 }
 
@@ -3530,7 +3533,7 @@ const textComponent2 = {
     category: "single",
     types: ["StaticText"],
   },
-  preview: "/assets/images/text_preview/2.png",
+  preview: TEXT_PREVIEW.TEXT_2,
   userId: "_O8L0WDPlpKhDXspugZe3"
 }
 export const textComponents = [textComponent1, textComponent2]
@@ -3542,7 +3545,7 @@ export const sampleFrames = [
     width: 1024,
     height: 768,
     unit: "px",
-    preview: "assets/images/presets_preview/1024x768.png",
+    preview: PRESETS_PREVIEW.S1024X768,
   },
   {
     id: 2,
@@ -3550,7 +3553,7 @@ export const sampleFrames = [
     width: 1920,
     height: 1080,
     unit: "px",
-    preview: "assets/images/presets_preview/1920x1080.png",
+    preview: PRESETS_PREVIEW.S1920X1080,
   },
   {
     id: 3,
@@ -3558,7 +3561,7 @@ export const sampleFrames = [
     width: 1080,
     height: 1920,
     unit: "px",
-    preview: "assets/images/presets_preview/1080x1920.png",
+    preview:  PRESETS_PREVIEW.S1080X1920,
   },
   {
     id: 4,
@@ -3566,7 +3569,7 @@ export const sampleFrames = [
     width: 1080,
     height: 1080,
     unit: "px",
-    preview: "assets/images/presets_preview/1080x1080.png",
+    preview:  PRESETS_PREVIEW.S1080X1080,
   },
   {
     id: 5,
@@ -3574,7 +3577,7 @@ export const sampleFrames = [
     width: 1200,
     height: 1200,
     unit: "px",
-    preview: "assets/images/presets_preview/1200x1200.png",
+    preview:  PRESETS_PREVIEW.S1200X1200,
   },
   {
     id: 6,
@@ -3582,7 +3585,7 @@ export const sampleFrames = [
     width: 1702,
     height: 630,
     unit: "px",
-    preview: "/assets/images/presets_preview/1702 x 630px.png",
+    preview: PRESETS_PREVIEW.S1702X630,
   },
   {
     id: 7,
@@ -3590,7 +3593,7 @@ export const sampleFrames = [
     width: 1920,
     height: 1080,
     unit: "px",
-    preview: "/assets/images/presets_preview/1920 x 1080px.png",
+    preview: PRESETS_PREVIEW.S1920X1080,
   },
   {
     id: 8,
@@ -3598,7 +3601,7 @@ export const sampleFrames = [
     width: 2560,
     height: 1440,
     unit: "px",
-    preview: "/assets/images/presets_preview/2560 x 1440px.png",
+    preview:  PRESETS_PREVIEW.S2560X1440,
   },
   {
     id: 9,
@@ -3606,7 +3609,7 @@ export const sampleFrames = [
     width: 1280,
     height: 720,
     unit: "px",
-    preview: "/assets/images/presets_preview/1280 x 720px.png",
+    preview:  PRESETS_PREVIEW.S1280X720,
   },
   {
     id: 10,
@@ -3614,7 +3617,7 @@ export const sampleFrames = [
     width: 1200,
     height: 675,
     unit: "px",
-    preview: "/assets/images/presets_preview/1200 x 675px.png",
+    preview:  PRESETS_PREVIEW.S1200X675,
   },
 ]
 
