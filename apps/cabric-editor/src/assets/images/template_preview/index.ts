@@ -1,8 +1,4 @@
 import { IMAGES_FOLDER } from '@/assets/config';
-// import TEMPLATE_1 from './template_1.png';
-// import TEMPLATE_2 from './template_2.png';
-// import TEMPLATE_3 from './template_3.png';
-
 
 
 const TEMPLATE_PREVIEW_FOLDER = IMAGES_FOLDER + '/template_preview';

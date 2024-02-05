@@ -1,12 +1,3 @@
-import S1024X768 from './1024x768.png';
-import S1080X1080 from './1080x1080.png';
-import S1080X1920 from './1080x1920.png';
-import S1200X675 from './1200x675.png';
-import S1200X1200 from './1200x1200.png';
-import S1280X720 from './1280x720.png';
-import S1702X630 from './1702x630.png';
-import S1920X1080 from './1920x1080.png';
-import S2560X1440 from './2560x1440.png';
 import { IMAGES_FOLDER } from '@/assets/config';
 
 const PRESETS_PREVIEW_FOLDER = IMAGES_FOLDER + '/presets_preview';
