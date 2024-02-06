@@ -1421,7 +1421,7 @@
     dom-css "^2.1.0"
     raf "^3.4.1"
 
-"@layerhub-io/react@workspace:^0.3.3":
+"@layerhub-io/react@^0.3.3":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@layerhub-io/react/-/react-0.3.3.tgz#de0e822697efa5a236577e49fb9a8af86445d76d"
   integrity sha512-pTnJou/V935tQeD51K4DCXHCF01x6hAugJCoR2LX+Pa2c+aKqLBZxdHPEHCzoEUmxnuh+2pJnBYHMkHpTbC0uQ==
@@ -1431,7 +1431,7 @@
     react-dom "^18.0.0"
     resize-observer-polyfill "^1.5.1"
 
-"@layerhub-io/types@^0.3.0", "@layerhub-io/types@workspace:^0.3.0":
+"@layerhub-io/types@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@layerhub-io/types/-/types-0.3.0.tgz#b77eddf24fe63e813218a2187bd76efc67445143"
   integrity sha512-GcQdBSCKeVjR8qcW/zQuucSZXxK6ub1ugCDskUcZ7rcfK/of41Sbq39G3ASMynTb/RzlrgcNa4zwIadtPBAV2Q==
