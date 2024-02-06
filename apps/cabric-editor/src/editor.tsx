@@ -3,11 +3,21 @@ import Container from "./Container"
 import "./index.css"
 import DesignEditor from "./views/DesignEditor"
 
-function CabricEditor() {
+
+interface CabricEditorProps {
+  designState?: any
+  onSave?: (designState: any) => void
+}
+
+function CabricEditor({designState, onSave} : CabricEditorProps) {
+
   return (
     <Provider>
       <Container>
-        <DesignEditor />
+        <DesignEditor
+          designState={designState}
+          onSave={onSave}
+        />
       </Container>
     </Provider>
   )

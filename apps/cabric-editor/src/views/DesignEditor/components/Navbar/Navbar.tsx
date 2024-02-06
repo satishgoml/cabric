@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { styled, ThemeProvider, DarkTheme } from "baseui"
 import { Theme } from "baseui/theme"
 import { Button, KIND } from "baseui/button"
@@ -14,7 +14,6 @@ import { loadVideoEditorAssets } from "@/utils/video"
 import DesignTitle from "./DesignTitle"
 import { IDesign } from "@/interfaces/DesignEditor"
 import Github from "@/components/Icons/Github"
-import useAuth from "@/providers/AuthProvider"
 import { toast } from "@/themes/defaultTheme"
 
 const Container = styled<"div", {}, Theme>("div", ({ $theme }) => ({
@@ -26,15 +25,25 @@ const Container = styled<"div", {}, Theme>("div", ({ $theme }) => ({
   alignItems: "center",
 }))
 
-export default function () {
+interface NavbarProps {
+  designState? : any 
+  onSave?: (designState: any) => void
+}
+
+export default function Navbar({designState, onSave} : NavbarProps) {
   const { setDisplayPreview, setScenes, setCurrentDesign, currentDesign, scenes } = useDesignEditorContext()
   const editorType = useEditorType()
   const editor = useEditor()
   const inputFileRef = React.useRef<HTMLInputElement>(null)
 
-  const {
-    logout
-  } = useAuth();
+
+
+  useEffect(() => {
+    if (designState) {
+      handleImportTemplate(designState)
+    }
+  }
+  , [designState, editor])
 
   const parseGraphicJSON = () => {
     const currentScene = editor.scene.exportToJSON()
@@ -64,7 +73,7 @@ export default function () {
         metadata: {},
         preview: "",
       }
-      makeDownload(graphicTemplate)
+      return graphicTemplate
     } else {
       console.log("NO CURRENT DESIGN")
     }
@@ -298,7 +307,18 @@ export default function () {
 
           <Button
             size="compact"
-            onClick={makeDownloadTemplate}
+            onClick={ async () => {
+              const updatedJSON = await makeDownloadTemplate()
+              makeDownload(updatedJSON!)
+              toast({
+                title: 'Design Exported',
+                description:  'Your design has  been exported successfully',
+                status: 'success',
+                duration: 9000,
+                isClosable: true,
+              })
+            }
+            }
             kind={KIND.tertiary}
             overrides={{
               StartEnhancer: {
@@ -337,10 +357,12 @@ export default function () {
             style={{ marginLeft: "0.5rem" }}
             size="compact"
             onClick={async () =>  {
-              await logout();
+              const updatedJSON = await makeDownloadTemplate()
+              await onSave?.(updatedJSON)
+
               toast({
-                title: 'Logout successful',
-                description: 'You have successfully logged out',
+                title: 'Design Saved',
+                description:  'Your design has been saved successfully',
                 status: 'success',
                 duration: 9000,
                 isClosable: true,
@@ -349,7 +371,7 @@ export default function () {
           }
             kind={KIND.primary}
           >
-            Log out
+            Save
           </Button>
         </Block>
       </Container>

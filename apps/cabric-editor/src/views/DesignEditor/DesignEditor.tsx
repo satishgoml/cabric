@@ -1,28 +1,33 @@
-import useEditorType from "@/hooks/useEditorType"
-import SelectEditor from "./SelectEditor"
+
 import GraphicEditor from "./GraphicEditor"
-import PresentationEditor from "./PresentationEditor"
-import VideoEditor from "./VideoEditor"
+
 import useDesignEditorContext from "@/hooks/useDesignEditorContext"
 import Preview from "./components/Preview"
-  // @ts-ignore
+// @ts-ignore
 import ContextMenu from "./components/ContextMenu"
 
-function DesignEditor() {
-  const editorType = useEditorType()
-  const { displayPreview, setDisplayPreview } = useDesignEditorContext()
+import { useEffect } from "react"
+
+interface DesignEditorProps {
+  designState?: any
+  onSave?: (designState: any) => void
+}
+
+function DesignEditor ({ designState, onSave }: DesignEditorProps) {
+  const { displayPreview, setDisplayPreview, setEditorType } = useDesignEditorContext()
+
+  useEffect(() => {
+    setEditorType("GRAPHIC")
+
+  }, [])
 
   return (
     <>
       {displayPreview && <Preview isOpen={displayPreview} setIsOpen={setDisplayPreview} />}
-      {
-        {
-          NONE: <SelectEditor />,
-          PRESENTATION: <PresentationEditor />,
-          VIDEO: <VideoEditor />,
-          GRAPHIC: <GraphicEditor />,
-        }[editorType]
-      }
+      <GraphicEditor
+        designState = { designState }
+        onSave = {onSave}
+      />,
     </>
   )
 }

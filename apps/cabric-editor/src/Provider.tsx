@@ -15,30 +15,28 @@ import { UserContextProvider } from "./providers/AuthProvider"
 import { ChakraProvider } from "@chakra-ui/react"
 import { theme } from "./themes/defaultTheme"
 
-
 const engine = new Styletron()
 
 export default function ({ children }: { children: React.ReactNode }) {
   return (
     <Provider store={store}>
       <ChakraProvider theme={theme}>
-      <UserContextProvider>
-        <DesignEditorProvider>
-          <TimerProvider>
-            <AppProvider>
-              <ScenifyProvider>
-                <StyletronProvider value={engine}>
-                  <BaseProvider theme={LightTheme}>
-                    <I18nextProvider i18n={i18next}>{children}</I18nextProvider>
-                  </BaseProvider>
-                </StyletronProvider>
-              </ScenifyProvider>
-            </AppProvider>
-          </TimerProvider>
-        </DesignEditorProvider>
-      </UserContextProvider>
+        <UserContextProvider>
+          <DesignEditorProvider>
+            <TimerProvider>
+              <AppProvider>
+                <ScenifyProvider>
+                  <StyletronProvider value={engine}>
+                    <BaseProvider theme={LightTheme}>
+                      <I18nextProvider i18n={i18next}>{children}</I18nextProvider>
+                    </BaseProvider>
+                  </StyletronProvider>
+                </ScenifyProvider>
+              </AppProvider>
+            </TimerProvider>
+          </DesignEditorProvider>
+        </UserContextProvider>
       </ChakraProvider>
     </Provider>
   )
 }
-
