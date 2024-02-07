@@ -11,7 +11,7 @@ const Container = styled<"div", {}, Theme>("div", ({ $theme }) => ({
   height: "50px",
   background: $theme.colors.white,
   display: "flex",
-  justifyContent: "space-between",
+  justifyContent: "center", // "space-between",
   alignItems: "center",
 }))
 
@@ -44,7 +44,8 @@ export default function () {
   }
 
   return (
-    <Container>
+    <Container >
+      
       {/* <div>
         <Button kind={KIND.tertiary} size={SIZE.compact}>
           <Icons.Layers size={20} />
@@ -123,6 +124,7 @@ export default function () {
           <Icons.TimePast size={16} />
         </Button>
       </div> */}
+
     </Container>
   )
 }
