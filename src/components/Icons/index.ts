@@ -9,7 +9,7 @@ import Pixabay from "./Pixabay"
 import Uploads from "./Uploads"
 import Logo from "./Logo"
 import Compress from "./Compress"
-import Expand from "./Expand"
+import Expand from "./Expand"  
 import Undo from "./Undo"
 import Redo from "./Redo"
 import Layers from "./Layers"
@@ -35,13 +35,13 @@ class Icons {
   static Graphics = Graphics
   static Pixabay = Pixabay
   static Uploads = Uploads
-  static Logo = Logo
-  static Compress = Compress
-  static Expand = Expand
-  static Undo = Undo
-  static Redo = Redo
-  static Refresh = Refresh
-  static Layers = Layers
+  static Logo = Logo  
+  static Compress = Compress  // Remove
+  static Expand = Expand  // Remove
+  static Undo = Undo  // Remove
+  static Redo = Redo  // Remove
+  static Refresh = Refresh  // Remove
+  static Layers = Layers  // Remove
   static TimePast = TimePast
   static AddCircleOutline = AddCircleOutline
   static RemoveCircleOutline = RemoveCircleOutline

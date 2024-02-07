@@ -44,18 +44,18 @@ export default function () {
 
   return (
     <Container>
-      <div>
+      {/* <div>
         <Button kind={KIND.tertiary} size={SIZE.compact}>
           <Icons.Layers size={20} />
         </Button>
-      </div>
+      </div> */}
       <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <Button kind={KIND.tertiary} size={SIZE.compact}>
+        {/* <Button kind={KIND.tertiary} size={SIZE.compact}>
           <Icons.Expand size={16} />
         </Button>
         <Button kind={KIND.tertiary} size={SIZE.compact}>
           <Icons.Compress size={16} />
-        </Button>
+        </Button> */}
         <Button kind={KIND.tertiary} size={SIZE.compact} onClick={() => editor.zoom.zoomOut()}>
           <Icons.RemoveCircleOutline size={24} />
         </Button>
@@ -108,7 +108,7 @@ export default function () {
           onChange={(e: any) => handleChange("zoomRatio", e.target.value)}
         />
       </div>
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "end" }}>
+      {/* <div style={{ display: "flex", alignItems: "center", justifyContent: "end" }}>
         <Button kind={KIND.tertiary} size={SIZE.compact}>
           <Icons.Refresh size={16} />
         </Button>
@@ -121,7 +121,7 @@ export default function () {
         <Button kind={KIND.tertiary} size={SIZE.compact}>
           <Icons.TimePast size={16} />
         </Button>
-      </div>
+      </div> */}
     </Container>
   )
 }

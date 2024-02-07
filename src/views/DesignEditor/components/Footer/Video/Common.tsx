@@ -35,9 +35,9 @@ export default function () {
   return (
     <Container>
       <Block style={{ display: "flex", fontWeight: 500, fontSize: "15px", alignItems: "center" }}>
-        <Button kind={KIND.tertiary} size={SIZE.compact}>
+        {/* <Button kind={KIND.tertiary} size={SIZE.compact}>
           <Icons.Layers size={20} />
-        </Button>
+        </Button> */}
         <Block>
           {new Date(time).toISOString().slice(14, 19)} / {new Date(maxTime).toISOString().slice(14, 19)}
         </Block>
@@ -46,7 +46,7 @@ export default function () {
         <Button kind={KIND.tertiary} size={SIZE.compact}>
           {options.zoomRatio}
         </Button>
-        <Button kind={KIND.tertiary} size={SIZE.compact}>
+        {/* <Button kind={KIND.tertiary} size={SIZE.compact}>
           <Icons.Refresh size={16} />
         </Button>
         <Button kind={KIND.tertiary} size={SIZE.compact}>
@@ -57,7 +57,7 @@ export default function () {
         </Button>
         <Button kind={KIND.tertiary} size={SIZE.compact}>
           <Icons.TimePast size={16} />
-        </Button>
+        </Button> */}
       </Block>
     </Container>
   )
