@@ -1,7 +1,7 @@
 import React from "react"
 import { styled } from "baseui"
 import { Theme } from "baseui/theme"
-import Icons from "@/components/Icons"
+// import Icons from "@/components/Icons"
 import { Button, KIND, SIZE } from "baseui/button"
 import { useZoomRatio } from "@layerhub-io/react"
 import { useTimer } from "@layerhub-io/use-timer"
