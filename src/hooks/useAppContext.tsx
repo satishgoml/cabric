@@ -17,6 +17,8 @@ function useAppContext() {
     setUploads,
     currentTemplate,
     setCurrentTemplate,
+    userFonts,
+    setUserFonts,
   } = useContext(AppContext)
   return {
     isMobile,
@@ -33,6 +35,8 @@ function useAppContext() {
     setUploads,
     currentTemplate,
     setCurrentTemplate,
+    userFonts,
+    setUserFonts,
   }
 }
 

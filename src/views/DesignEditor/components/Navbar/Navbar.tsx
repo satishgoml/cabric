@@ -15,6 +15,7 @@ import DesignTitle from "./DesignTitle"
 import { IDesign } from "@/interfaces/DesignEditor"
 import Github from "@/components/Icons/Github"
 import { toast } from "@/themes/defaultTheme"
+import useAppContext from "@/hooks/useAppContext"
 
 const Container = styled<"div", {}, Theme>("div", ({ $theme }) => ({
   height: "64px",
@@ -36,6 +37,7 @@ export default function Navbar({designState, onSave} : NavbarProps) {
   const editor = useEditor()
   const inputFileRef = React.useRef<HTMLInputElement>(null)
 
+  const {userFonts} = useAppContext()
 
 
   useEffect(() => {
@@ -182,7 +184,7 @@ export default function Navbar({designState, onSave} : NavbarProps) {
         metadata: {},
       }
       const loadedScene = await loadVideoEditorAssets(scene)
-      await loadTemplateFonts(loadedScene)
+      await loadTemplateFonts(loadedScene, userFonts)
 
       const preview = (await editor.renderer.render(loadedScene)) as string
       scenes.push({ ...loadedScene, preview })

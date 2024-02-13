@@ -7,9 +7,10 @@ import DesignEditor from "./views/DesignEditor"
 interface CabricEditorProps {
   designState?: any
   onSave?: (designState: any) => void
+  userFonts?: any
 }
 
-function CabricEditor({designState, onSave} : CabricEditorProps) {
+function CabricEditor({designState, onSave, userFonts} : CabricEditorProps) {
 
   return (
     <Provider>
@@ -17,6 +18,7 @@ function CabricEditor({designState, onSave} : CabricEditorProps) {
         <DesignEditor
           designState={designState}
           onSave={onSave}
+          userFonts={userFonts}
         />
       </Container>
     </Provider>

@@ -56,12 +56,12 @@ const initialOptions: TextState = {
 export default function () {
   const [state, setState] = React.useState<TextState>(initialOptions)
   const activeObject = useActiveObject() as Required<IStaticText>
-  const { setActiveSubMenu } = useAppContext()
+  const { setActiveSubMenu, userFonts } = useAppContext()
   const editor = useEditor()
 
   React.useEffect(() => {
     if (activeObject && activeObject.type === "StaticText") {
-      const textProperties = getTextProperties(activeObject, SAMPLE_FONTS)
+      const textProperties = getTextProperties(activeObject,  SAMPLE_FONTS. concat(userFonts))
       setState({ ...state, ...textProperties })
     }
   }, [activeObject])

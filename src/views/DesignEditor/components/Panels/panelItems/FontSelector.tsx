@@ -22,6 +22,7 @@ export default function () {
   const setIsSidebarOpen = useSetIsSidebarOpen()
 
   const [commonFonts, setCommonFonts] = React.useState<any[]>([])
+  const {userFonts} = useAppContext()
   const [css] = useStyletron()
   const editor = useEditor()
 
@@ -35,7 +36,7 @@ export default function () {
       }
       return familyFonts[familyFonts.length - 1]
     })
-    setCommonFonts(standardFonts)
+    setCommonFonts( standardFonts.concat(userFonts))
   }, [])
 
   const handleFontFamilyChange = async (x: any) => {
@@ -92,7 +93,9 @@ export default function () {
 
       <Scrollable>
         <div style={{ padding: "0 1.5rem", display: "grid", gap: "0.2rem" }}>
-          {commonFonts.map((font, index) => {
+          {commonFonts.
+            filter((font) => font.postscript_name.toLowerCase().includes(query.toLowerCase()))
+            .map((font, index) => {
             return (
               <div
                 key={index}
@@ -109,7 +112,7 @@ export default function () {
                 })}
                 id={font.id}
               >
-                <img src={font.preview} />
+                <Block style={{ fontFamily: font.postscript_name }}>{font.postscript_name}</Block>
               </div>
             )
           })}
