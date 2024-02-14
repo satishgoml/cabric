@@ -373,7 +373,7 @@ export default function Navbar({designState, onSave} : NavbarProps) {
             size="compact"
             style={{ marginLeft: "0.5rem" }}
             onClick={ async () => {
-              await applyContext?.applyToAll()
+              await applyContext?.applyToAllAssets()
               toast({
                 title: 'Applied To All',
                 description:  'Your changes have been applied to all layers',

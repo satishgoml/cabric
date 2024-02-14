@@ -41079,7 +41079,7 @@ class qwe {
         close: () => {
           this.conn = null;
         }
-      }), import("./browser-munkCYlG.js").then((t) => t.b).then(({ default: t }) => {
+      }), import("./browser-IGE3PRau.js").then((t) => t.b).then(({ default: t }) => {
         this.conn = new t(this._endPointURL(), void 0, {
           headers: this.headers
         }), this.setupConnection();
@@ -62841,7 +62841,7 @@ function i7e({ designState: e, onSave: t }) {
             size: "compact",
             style: { marginLeft: "0.5rem" },
             onClick: async () => {
-              await (c == null ? void 0 : c.applyToAll()), EC({
+              await (c == null ? void 0 : c.applyToAllAssets()), EC({
                 title: "Applied To All",
                 description: "Your changes have been applied to all layers",
                 status: "success",
@@ -102183,7 +102183,7 @@ var yrt = mrt(tK), mo = px, Zi = crt, brt = [
     canPlay: Zi.canPlay.youtube,
     lazyPlayer: (0, mo.lazy)(() => import(
       /* webpackChunkName: 'reactPlayerYouTube' */
-      "./YouTube-ZUXg0sHk.js"
+      "./YouTube-cpeiGODq.js"
     ).then((e) => e.Y))
   },
   {
@@ -102192,7 +102192,7 @@ var yrt = mrt(tK), mo = px, Zi = crt, brt = [
     canPlay: Zi.canPlay.soundcloud,
     lazyPlayer: (0, mo.lazy)(() => import(
       /* webpackChunkName: 'reactPlayerSoundCloud' */
-      "./SoundCloud-lhVK1lgb.js"
+      "./SoundCloud-6N7LUL7H.js"
     ).then((e) => e.S))
   },
   {
@@ -102201,7 +102201,7 @@ var yrt = mrt(tK), mo = px, Zi = crt, brt = [
     canPlay: Zi.canPlay.vimeo,
     lazyPlayer: (0, mo.lazy)(() => import(
       /* webpackChunkName: 'reactPlayerVimeo' */
-      "./Vimeo-je2tzpRw.js"
+      "./Vimeo-GASzHLjU.js"
     ).then((e) => e.V))
   },
   {
@@ -102210,7 +102210,7 @@ var yrt = mrt(tK), mo = px, Zi = crt, brt = [
     canPlay: Zi.canPlay.facebook,
     lazyPlayer: (0, mo.lazy)(() => import(
       /* webpackChunkName: 'reactPlayerFacebook' */
-      "./Facebook-Ue9bKrFp.js"
+      "./Facebook-oZn4Mxk2.js"
     ).then((e) => e.F))
   },
   {
@@ -102219,7 +102219,7 @@ var yrt = mrt(tK), mo = px, Zi = crt, brt = [
     canPlay: Zi.canPlay.streamable,
     lazyPlayer: (0, mo.lazy)(() => import(
       /* webpackChunkName: 'reactPlayerStreamable' */
-      "./Streamable-zLzQVVhw.js"
+      "./Streamable-lhb-vBTw.js"
     ).then((e) => e.S))
   },
   {
@@ -102228,7 +102228,7 @@ var yrt = mrt(tK), mo = px, Zi = crt, brt = [
     canPlay: Zi.canPlay.wistia,
     lazyPlayer: (0, mo.lazy)(() => import(
       /* webpackChunkName: 'reactPlayerWistia' */
-      "./Wistia-JRAfvRbq.js"
+      "./Wistia-mo2BxZzn.js"
     ).then((e) => e.W))
   },
   {
@@ -102237,7 +102237,7 @@ var yrt = mrt(tK), mo = px, Zi = crt, brt = [
     canPlay: Zi.canPlay.twitch,
     lazyPlayer: (0, mo.lazy)(() => import(
       /* webpackChunkName: 'reactPlayerTwitch' */
-      "./Twitch-tuYTCD2A.js"
+      "./Twitch-jmFKM70K.js"
     ).then((e) => e.T))
   },
   {
@@ -102246,7 +102246,7 @@ var yrt = mrt(tK), mo = px, Zi = crt, brt = [
     canPlay: Zi.canPlay.dailymotion,
     lazyPlayer: (0, mo.lazy)(() => import(
       /* webpackChunkName: 'reactPlayerDailyMotion' */
-      "./DailyMotion-bfxTtu6W.js"
+      "./DailyMotion-Ej9M4mup.js"
     ).then((e) => e.D))
   },
   {
@@ -102255,7 +102255,7 @@ var yrt = mrt(tK), mo = px, Zi = crt, brt = [
     canPlay: Zi.canPlay.mixcloud,
     lazyPlayer: (0, mo.lazy)(() => import(
       /* webpackChunkName: 'reactPlayerMixcloud' */
-      "./Mixcloud-WwdBe-Ls.js"
+      "./Mixcloud-zqMBrvnD.js"
     ).then((e) => e.M))
   },
   {
@@ -102264,7 +102264,7 @@ var yrt = mrt(tK), mo = px, Zi = crt, brt = [
     canPlay: Zi.canPlay.vidyard,
     lazyPlayer: (0, mo.lazy)(() => import(
       /* webpackChunkName: 'reactPlayerVidyard' */
-      "./Vidyard-AnhiJVZJ.js"
+      "./Vidyard-i_47malh.js"
     ).then((e) => e.V))
   },
   {
@@ -102273,7 +102273,7 @@ var yrt = mrt(tK), mo = px, Zi = crt, brt = [
     canPlay: Zi.canPlay.kaltura,
     lazyPlayer: (0, mo.lazy)(() => import(
       /* webpackChunkName: 'reactPlayerKaltura' */
-      "./Kaltura-bQgMw0OU.js"
+      "./Kaltura-oYZ68UsL.js"
     ).then((e) => e.K))
   },
   {
@@ -102283,7 +102283,7 @@ var yrt = mrt(tK), mo = px, Zi = crt, brt = [
     canEnablePIP: (e) => Zi.canPlay.file(e) && (document.pictureInPictureEnabled || (0, mo.supportsWebKitPresentationMode)()) && !Zi.AUDIO_EXTENSIONS.test(e),
     lazyPlayer: (0, mo.lazy)(() => import(
       /* webpackChunkName: 'reactPlayerFilePlayer' */
-      "./FilePlayer-96iTcaij.js"
+      "./FilePlayer-SypR76DH.js"
     ).then((e) => e.F))
   }
 ], _$ = Number.isNaN || function(t) {
@@ -102697,7 +102697,7 @@ ent(cK, {
 var rnt = tnt(cK), lh = wm(Q), nnt = wm(LY), HO = wm(Crt), S$ = wm(xk), mg = iK, fK = px, int = wm(Vrt);
 const ont = (0, fK.lazy)(() => import(
   /* webpackChunkName: 'reactPlayerPreview' */
-  "./Preview-f3hD0Q82.js"
+  "./Preview-drJkLP-m.js"
 ).then((e) => e.P)), ant = typeof window < "u" && window.document, snt = typeof te < "u" && te.window && te.window.document, lnt = Object.keys(mg.propTypes), unt = ant || snt ? lh.Suspense : () => null, rg = [], cnt = (e, t) => {
   var r;
   return r = class extends lh.Component {

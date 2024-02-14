@@ -44,7 +44,7 @@ ReactDOM.render(
       userFonts = { userFonts }
       applyContext = {{
         isApplyingToAll: true,
-        applyToAll: () => {
+        applyToAllAssets: () => {
           console.log("Applying to all")
         },
       }}
