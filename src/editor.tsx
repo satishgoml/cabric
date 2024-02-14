@@ -8,9 +8,10 @@ interface CabricEditorProps {
   designState?: any
   onSave?: (designState: any) => void
   userFonts?: any
+  applyContext?: any
 }
 
-function CabricEditor({designState, onSave, userFonts} : CabricEditorProps) {
+function CabricEditor({designState, onSave, userFonts, applyContext} : CabricEditorProps) {
 
   return (
     <Provider>
@@ -19,6 +20,7 @@ function CabricEditor({designState, onSave, userFonts} : CabricEditorProps) {
           designState={designState}
           onSave={onSave}
           userFonts={userFonts}
+          applyContext={applyContext}
         />
       </Container>
     </Provider>

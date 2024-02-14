@@ -37,7 +37,7 @@ export default function Navbar({designState, onSave} : NavbarProps) {
   const editor = useEditor()
   const inputFileRef = React.useRef<HTMLInputElement>(null)
 
-  const {userFonts} = useAppContext()
+  const {userFonts, applyContext} = useAppContext()
 
 
   useEffect(() => {
@@ -347,13 +347,7 @@ export default function Navbar({designState, onSave} : NavbarProps) {
             <Play size={24} />
           </Button>
 
-          <Button
-            size="compact"
-            onClick={() => window.location.replace("https://github.com/layerhub-io/react-design-editor")}
-            kind={KIND.tertiary}
-          >
-            <Github size={24} />
-          </Button>
+
 
           <Button
             style={{ marginLeft: "0.5rem" }}
@@ -374,6 +368,27 @@ export default function Navbar({designState, onSave} : NavbarProps) {
             kind={KIND.primary}
           >
             Save
+          </Button>
+
+          <Button
+            size="compact"
+            style={{ marginLeft: "0.5rem" }}
+            onClick={ async () => {
+              await applyContext?.applyToAll()
+              toast({
+                title: 'Applied To All',
+                description:  'Your changes have been applied to all layers',
+                status: 'success',
+                duration: 9000,
+                isClosable: true,
+              })
+            }
+            }
+
+            disabled={applyContext.isApplyingToAll}
+
+          >
+            Apply To All
           </Button>
         </Block>
       </Container>

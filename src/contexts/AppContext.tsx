@@ -19,6 +19,8 @@ interface IAppContext {
     setCurrentTemplate: any;
     userFonts: any[];
     setUserFonts: (fonts: any[]) => void;
+    applyContext: any;
+    setApplyContext: any;
 }
 
 export const AppContext = createContext<IAppContext>({
@@ -39,6 +41,8 @@ export const AppContext = createContext<IAppContext>({
     setCurrentTemplate: {},
     userFonts: [],
     setUserFonts: () => {},
+    applyContext: {},
+    setApplyContext: () => {},
 });
 
 export function AppProvider({ children }: { children: React.ReactNode }) {
@@ -50,6 +54,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
     const [currentTemplate, setCurrentTemplate] = useState(null);
     const [userFonts, setUserFonts] = useState<any[]>([]);
+    const [applyContext, setApplyContext] = useState<any>({});
     const context = {
         isMobile,
         setIsMobile,
@@ -67,6 +72,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         setCurrentTemplate,
         userFonts,
         setUserFonts,
+        applyContext,
+        setApplyContext,
     };
     return <AppContext.Provider value={context}>{children}</AppContext.Provider>;
 }

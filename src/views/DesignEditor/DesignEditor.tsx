@@ -12,16 +12,18 @@ interface DesignEditorProps {
   designState?: any;
   onSave?: (designState: any) => void;
   userFonts?: any;
+  applyContext?: any;
 }
 
-function DesignEditor({ designState, onSave, userFonts }: DesignEditorProps) {
+function DesignEditor({ designState, onSave, userFonts, applyContext }: DesignEditorProps) {
   const { displayPreview, setDisplayPreview, setEditorType } =
     useDesignEditorContext();
-  const { setUserFonts } = useAppContext();
+  const { setUserFonts, setApplyContext} = useAppContext();
 
   useEffect(() => {
     setEditorType("GRAPHIC");
     setUserFonts(userFonts);
+    setApplyContext(applyContext);
   }, []);
 
   return (

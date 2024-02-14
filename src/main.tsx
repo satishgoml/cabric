@@ -42,6 +42,12 @@ ReactDOM.render(
       designState = { NewsletterTemplate }
       onSave = { (designState: any) => console.log(designState) }
       userFonts = { userFonts }
+      applyContext = {{
+        isApplyingToAll: true,
+        applyToAll: () => {
+          console.log("Applying to all")
+        },
+      }}
       
     />
   </React.StrictMode>,

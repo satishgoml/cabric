@@ -19,6 +19,8 @@ function useAppContext() {
     setCurrentTemplate,
     userFonts,
     setUserFonts,
+    applyContext,
+    setApplyContext,
   } = useContext(AppContext)
   return {
     isMobile,
@@ -37,6 +39,8 @@ function useAppContext() {
     setCurrentTemplate,
     userFonts,
     setUserFonts,
+    applyContext,
+    setApplyContext,
   }
 }
 
