@@ -13,7 +13,6 @@ import { loadTemplateFonts } from "@/utils/fonts"
 import { loadVideoEditorAssets } from "@/utils/video"
 import DesignTitle from "./DesignTitle"
 import { IDesign } from "@/interfaces/DesignEditor"
-import Github from "@/components/Icons/Github"
 import { toast } from "@/themes/defaultTheme"
 import useAppContext from "@/hooks/useAppContext"
 
