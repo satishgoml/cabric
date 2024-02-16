@@ -27,7 +27,7 @@ const Container = styled<"div", {}, Theme>("div", ({ $theme }) => ({
 
 interface NavbarProps {
   designState?: any;
-  onSave?: (designState: any) => void;
+  onSave?: (designState: any, image: any) => void;
 }
 
 export default function Navbar({ designState, onSave }: NavbarProps) {
@@ -83,6 +83,18 @@ export default function Navbar({ designState, onSave }: NavbarProps) {
       console.log("NO CURRENT DESIGN");
     }
   };
+
+  const getGraphicImage = async () => {
+
+    const currentScene = await editor.scene.exportToJSON();
+    // render the current scene
+    const loadedScene = await loadVideoEditorAssets(currentScene);
+
+    const preview = (await editor.renderer.render(loadedScene)) as string;
+
+    return preview;
+
+  }
 
   const parsePresentationJSON = () => {
     const currentScene = editor.scene.exportToJSON();
@@ -176,6 +188,21 @@ export default function Navbar({ designState, onSave }: NavbarProps) {
     }
   };
 
+  const downloadImage = async () => {
+    // get current scene and render it
+    const image = await getGraphicImage();
+
+    const a = document.createElement
+    ("a");
+
+    a.href = image;
+    a.download = "image.png";
+    a.click();
+      
+  };
+
+  
+
   const loadGraphicTemplate = async (payload: IDesign) => {
     const scenes = [];
     const { scenes: scns, ...design } = payload;
@@ -259,9 +286,9 @@ export default function Navbar({ designState, onSave }: NavbarProps) {
     [editor]
   );
 
-  const handleInputFileRefClick = () => {
-    inputFileRef.current?.click();
-  };
+  // const handleInputFileRefClick = () => {
+  //   inputFileRef.current?.click();
+  // };
 
   const handleFileInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files![0];
@@ -303,45 +330,7 @@ export default function Navbar({ designState, onSave }: NavbarProps) {
             ref={inputFileRef}
             style={{ display: "none" }}
           />
-          <Button
-            size="compact"
-            onClick={handleInputFileRefClick}
-            kind={KIND.tertiary}
-            overrides={{
-              StartEnhancer: {
-                style: {
-                  marginRight: "4px",
-                },
-              },
-            }}
-          >
-            Import
-          </Button>
-
-          <Button
-            size="compact"
-            onClick={async () => {
-              const updatedJSON = await makeDownloadTemplate();
-              makeDownload(updatedJSON!);
-              toast({
-                title: "Design Exported",
-                description: "Your design has  been exported successfully",
-                status: "success",
-                duration: 9000,
-                isClosable: true,
-              });
-            }}
-            kind={KIND.tertiary}
-            overrides={{
-              StartEnhancer: {
-                style: {
-                  marginRight: "4px",
-                },
-              },
-            }}
-          >
-            Export
-          </Button>
+          
           <Button
             size="compact"
             onClick={() => setDisplayPreview(true)}
@@ -362,7 +351,9 @@ export default function Navbar({ designState, onSave }: NavbarProps) {
             size="compact"
             onClick={async () => {
               const updatedJSON = await makeDownloadTemplate();
-              await onSave?.(updatedJSON);
+              const image = await getGraphicImage();
+
+              await onSave?.(updatedJSON, image);
 
               toast({
                 title: "Design Saved",
@@ -376,6 +367,15 @@ export default function Navbar({ designState, onSave }: NavbarProps) {
           >
             Save
           </Button>
+
+          <Button
+            size="compact"
+            style={{ marginLeft: "0.5rem" }}
+            onClick={downloadImage}
+          >
+            Download Image
+          </Button>
+
 
           <Button
             size="compact"

@@ -40,7 +40,9 @@ ReactDOM.render(
   <React.StrictMode>
     <CabricEditor 
       designState = { NewsletterTemplate }
-      onSave = { (designState: any) => console.log(designState) }
+      onSave = { (designState: any,
+          image: any,
+        ) => console.log(designState, image) }
       userFonts = { userFonts }
       applyContext = {{
         isApplyingToAll: true,

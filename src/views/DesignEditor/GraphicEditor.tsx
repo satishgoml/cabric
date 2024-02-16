@@ -10,7 +10,7 @@ import ContextMenu from "./components/ContextMenu"
 
 interface GraphicEditorProps {
   designState?: any
-  onSave?: (designState: any) => void
+  onSave?: (designState: any, image: any) => void
 }
 
 function GraphicEditor({ designState , onSave}: GraphicEditorProps) {

@@ -1,4 +1,4 @@
-import { g as e } from "./index-7Fhxyh_J.js";
+import { g as e } from "./index-2QmBVh9z.js";
 var o = function() {
   throw new Error(
     "ws does not work in the browser. Browser clients must use the native WebSocket object"

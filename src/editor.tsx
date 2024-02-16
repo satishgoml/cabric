@@ -6,7 +6,7 @@ import DesignEditor from "./views/DesignEditor"
 
 interface CabricEditorProps {
   designState?: any
-  onSave?: (designState: any) => void
+  onSave?: (designState: any, image : any) => void
   userFonts?: any
   applyContext?: any
 }

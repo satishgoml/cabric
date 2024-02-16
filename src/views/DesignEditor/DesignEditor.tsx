@@ -10,7 +10,7 @@ import useAppContext from "@/hooks/useAppContext";
 
 interface DesignEditorProps {
   designState?: any;
-  onSave?: (designState: any) => void;
+  onSave?: (designState: any, image: any) => void;
   userFonts?: any;
   applyContext?: any;
 }
