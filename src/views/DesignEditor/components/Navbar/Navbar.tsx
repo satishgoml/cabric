@@ -392,7 +392,7 @@ export default function Navbar({ designState, onSave }: NavbarProps) {
 
             title= { !isChangesSaved ? "Please save your design before applying to all" :
               
-              "Note : Please ensure that all the assets are genarated before applying to all"}
+              "Note : Please ensure that all the assets are genarated"}
           >
             Apply To All
           </Button>
