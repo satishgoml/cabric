@@ -3,10 +3,10 @@ export const BASE_ITEMS = [
   //   id: "templates",
   //   name: "Templates",
   // },
-  {
-    id: "customize",
-    name: "Customize",
-  },
+  // {
+  //   id: "customize",
+  //   name: "Customize",
+  // },
   {
     id: "elements",
     name: "Elements",
@@ -43,10 +43,10 @@ export const VIDEO_PANEL_ITEMS = [
   //   id: "templates",
   //   name: "Templates",
   // },
-  {
-    id: "customize",
-    name: "Customize",
-  },
+  // {
+  //   id: "customize",
+  //   name: "Customize",
+  // },
   {
     id: "elements",
     name: "Elements",
