@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { styled, ThemeProvider, DarkTheme } from "baseui";
 import { Theme } from "baseui/theme";
 import { Button, KIND } from "baseui/button";
@@ -43,6 +43,8 @@ export default function Navbar({ designState, onSave }: NavbarProps) {
   const inputFileRef = React.useRef<HTMLInputElement>(null);
 
   const { userFonts, applyContext } = useAppContext();
+
+  const [isChangesSaved, setIsChangesSaved] = useState(false);
 
   useEffect(() => {
     if (designState) {
@@ -362,6 +364,8 @@ export default function Navbar({ designState, onSave }: NavbarProps) {
                 duration: 9000,
                 isClosable: true,
               });
+
+              setIsChangesSaved(true);
             }}
             kind={KIND.primary}
           >
@@ -373,7 +377,7 @@ export default function Navbar({ designState, onSave }: NavbarProps) {
             style={{ marginLeft: "0.5rem" }}
             onClick={downloadImage}
           >
-            Download Image
+            Download Asset
           </Button>
 
 
@@ -382,8 +386,13 @@ export default function Navbar({ designState, onSave }: NavbarProps) {
             style={{ marginLeft: "0.5rem" }}
             onClick={async () => {
               await applyContext?.applyToAllAssets();
+              setIsChangesSaved(false);
             }}
-            disabled={applyContext.isApplyingToAll}
+            disabled={applyContext.isApplyingToAll || !isChangesSaved}
+
+            title= { !isChangesSaved ? "Please save your design before applying to all" :
+              
+              "Note : Please ensure that all the assets are genarated before applying to all"}
           >
             Apply To All
           </Button>
