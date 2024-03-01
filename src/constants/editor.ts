@@ -616,6 +616,142 @@ export const FONT_SIZES = [6, 8, 10, 12, 16, 18, 20, 24, 30, 36, 48, 60, 72, 96,
 
 export const SAMPLE_FONTS = [
   {
+    "id": "font_9qrREGdm_L_MD9sbbGK4uU_y",
+    "family": "Arial",
+    "full_name": "Arial Bold",
+    "postscript_name": "Arial-Bold",
+    "preview": "https://www.cufonfonts.com/font-preview/arial/bold",
+    "style": "Arial-Bold",
+    "url": "https://drallpyybfsueuxnipxi.supabase.co/storage/v1/object/public/solarplexus-static/fonts/arial/ARIALBD.woff",
+    "category": "sans-serif"
+  },
+  {
+    "id": "font_lXvnSq7qpnFjfMo2HPFCc4ro",
+    "family": "Arial",
+    "full_name": "Arial Regular",
+    "postscript_name": "Arial-Regular",
+    "preview": "https://www.cufonfonts.com/font-preview/arial/regular",
+    "style": "Arial-Regular",
+    "url": "https://drallpyybfsueuxnipxi.supabase.co/storage/v1/object/public/solarplexus-static/fonts/arial/ARIAL.woff",
+    "category": "sans-serif"
+  },
+  {
+    "id": "font_lXvnSq7qpnFjfMo2HPFCc4ro",
+    "family": "Arial",
+    "full_name": "Arial Italic",
+    "postscript_name": "Arial-Italic",
+    "preview": "https://www.cufonfonts.com/font-preview/arial/regular",
+    "style": "Arial-Italic",
+    "url": "https://drallpyybfsueuxnipxi.supabase.co/storage/v1/object/public/solarplexus-static/fonts/arial/ARIALI.woff",
+    "category": "sans-serif"
+  },
+
+  {
+    "id": "font_lXvnSq7qpnFjfMo2HPFCc4ro",
+    "family": "Arial",
+    "full_name": "Arial Bold Italic",
+    "postscript_name": "Arial-BoldItalic",
+    "preview": "https://www.cufonfonts.com/font-preview/arial/regular",
+    "style": "Arial-BoldItalic",
+    "url": "https://drallpyybfsueuxnipxi.supabase.co/storage/v1/object/public/solarplexus-static/fonts/arial/ARIALBI.woff",
+    "category": "sans-serif"
+  },
+
+  {
+    "id": "font_lXvnSq7qpnFjfMo2HPFCc4ro",
+    "family": "Calibri",
+    "full_name": "Calibri Bold",
+    "postscript_name": "Calibri-Bold",
+    "preview": "https://www.cufonfonts.com/font-preview/calibri/bold",
+    "style": "Calibri-Bold",
+    "url": "https://drallpyybfsueuxnipxi.supabase.co/storage/v1/object/public/solarplexus-static/fonts/calibri/calibrib.ttf",
+    "category": "sans-serif"
+  },
+  {
+    "id": "font_lXvnSq7qpnFjfMo2HPFCc4ro",
+    "family": "Calibri",
+    "full_name": "Calibri Regular",
+    "postscript_name": "Calibri-Regular",
+    "preview": "https://www.cufonfonts.com/font-preview/calibri/regular",
+    "style": "Calibri-Regular",
+    "url": "https://drallpyybfsueuxnipxi.supabase.co/storage/v1/object/public/solarplexus-static/fonts/calibri/Calibri.ttf",
+    "category": "sans-serif"
+  },
+
+  {
+    "id": "font_lXvnSq7qpnFjfMo2HPFCc4ro",
+    "family": "Calibri",
+    "full_name": "Calibri Italic",
+    "postscript_name": "Calibri-Italic",
+    "preview": "https://www.cufonfonts.com/font-preview/calibri/regular",
+    "style": "Calibri-Italic",
+    "url": "https://drallpyybfsueuxnipxi.supabase.co/storage/v1/object/public/solarplexus-static/fonts/calibri/calibrii.ttf",
+    "category": "sans-serif"
+  },
+
+  {
+    "id": "font_lXvnSq7qpnFjfMo2HPFCc4ro",
+    "family": "Calibri",
+    "full_name": "Calibri Bold Italic",
+    "postscript_name": "Calibri-BoldItalic",
+    "preview": "https://www.cufonfonts.com/font-preview/calibri/regular",
+    "style": "Calibri-BoldItalic",
+    "url": "https://drallpyybfsueuxnipxi.supabase.co/storage/v1/object/public/solarplexus-static/fonts/calibri/CALIBRIZ.TTF",
+    "category": "sans-serif"
+  },
+  {
+    "id": "font_lXvnSq7qpnFjfMo2HPFCc4ro",
+    "family": "Helvetica",
+    "full_name": "Helvetica Bold",
+    "postscript_name": "Helvetica-Bold",
+    "preview": "https://www.cufonfonts.com/font-preview/helvetica/bold",
+    "style": "Helvetica-Bold",
+    "url": "https://drallpyybfsueuxnipxi.supabase.co/storage/v1/object/public/solarplexus-static/fonts/helvetica/Helvetica-Bold.ttf",
+    "category": "sans-serif"
+  },
+  {
+    "id": "font_lXvnSq7qpnFjfMo2HPFCc4ro",
+    "family": "Helvetica",
+    "full_name": "Helvetica Regular",
+    "postscript_name": "Helvetica-Regular",
+    "preview": "https://www.cufonfonts.com/font-preview/helvetica/regular",
+    "style": "Helvetica",
+    "url": "https://drallpyybfsueuxnipxi.supabase.co/storage/v1/object/public/solarplexus-static/fonts/helvetica/Helvetica.ttf",
+    "category": "sans-serif"
+  },
+
+  {
+    "id": "font_lXvnSq7qpnFjfMo2HPFCc4ro",
+    "family": "Helvetica",
+    "full_name": "Helvetica Italic",
+    "postscript_name": "Helvetica-Italic",
+    "preview": "https://www.cufonfonts.com/font-preview/helvetica/regular",
+    "style": "Helvetica-Italic",
+    "url": "https://drallpyybfsueuxnipxi.supabase.co/storage/v1/object/public/solarplexus-static/fonts/helvetica/Helvetica-Oblique.ttf",
+    "category": "sans-serif"
+  },
+  {
+    "id": "font_lXvnSq7qpnFjfMo2HPFCc4ro",
+    "family": "Helvetica",
+    "full_name": "Helvetica Bold Italic",
+    "postscript_name": "Helvetica-BoldItalic",
+    "preview": "https://www.cufonfonts.com/font-preview/helvetica/regular",
+    "style": "Helvetica-BoldItalic",
+    "url": "https://drallpyybfsueuxnipxi.supabase.co/storage/v1/object/public/solarplexus-static/fonts/helvetica/Helvetica-BoldOblique.ttf",
+    "category": "sans-serif"
+  },
+
+  {
+    "id": "font_lXvnSq7qpnFjfMo2HPFCc4ro",
+    "family": "Helvetica",
+    "full_name": "Helvetica Regular",
+    "postscript_name": "Helvetica",
+    "preview": "https://www.cufonfonts.com/font-preview/helvetica/regular",
+    "style": "Helvetica",
+    "url": "https://fonts.gstatic.com/s/helvetica/v15/Helvetica.ttf",
+    "category": "sans-serif"
+  },
+  {
     id: "font_zjroeXKL5b6UdbfdqDXVhgf9",
     family: "Gaegu",
     full_name: "Gaegu Light",

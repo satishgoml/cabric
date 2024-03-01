@@ -1,4 +1,4 @@
-import { C as a } from "./index-TLkTsr97.js";
+import { C as a } from "./index-jNHvbApi.js";
 export {
   a as CabricEditor
 };
