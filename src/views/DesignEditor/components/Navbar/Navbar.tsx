@@ -87,7 +87,6 @@ export default function Navbar({ designState, onSave }: NavbarProps) {
   };
 
   const getGraphicImage = async () => {
-
     const currentScene = await editor.scene.exportToJSON();
     // render the current scene
     const loadedScene = await loadVideoEditorAssets(currentScene);
@@ -95,8 +94,7 @@ export default function Navbar({ designState, onSave }: NavbarProps) {
     const preview = (await editor.renderer.render(loadedScene)) as string;
 
     return preview;
-
-  }
+  };
 
   const parsePresentationJSON = () => {
     const currentScene = editor.scene.exportToJSON();
@@ -194,16 +192,12 @@ export default function Navbar({ designState, onSave }: NavbarProps) {
     // get current scene and render it
     const image = await getGraphicImage();
 
-    const a = document.createElement
-    ("a");
+    const a = document.createElement("a");
 
     a.href = image;
     a.download = "image.png";
     a.click();
-      
   };
-
-  
 
   const loadGraphicTemplate = async (payload: IDesign) => {
     const scenes = [];
@@ -332,7 +326,7 @@ export default function Navbar({ designState, onSave }: NavbarProps) {
             ref={inputFileRef}
             style={{ display: "none" }}
           />
-          
+
           <Button
             size="compact"
             onClick={() => setDisplayPreview(true)}
@@ -380,7 +374,6 @@ export default function Navbar({ designState, onSave }: NavbarProps) {
             Download Asset
           </Button>
 
-
           <Button
             size="compact"
             style={{ marginLeft: "0.5rem" }}
@@ -388,11 +381,18 @@ export default function Navbar({ designState, onSave }: NavbarProps) {
               await applyContext?.applyToAllAssets();
               setIsChangesSaved(false);
             }}
-            disabled={applyContext.isApplyingToAll || !isChangesSaved}
-
-            title= { !isChangesSaved ? "Please save your design before applying to all" :
-              
-              "Note : Please ensure that all the assets are generated"}
+            disabled={
+              applyContext.isApplyingToAll ||
+              !isChangesSaved ||
+              applyContext.isGenerating
+            }
+            title={
+              !isChangesSaved
+                ? "Please save your design before applying to all"
+                : applyContext.isGenerating
+                ? "Generating Assets, Please wait"
+                : "Apply To All"
+            }
           >
             Apply To All
           </Button>
